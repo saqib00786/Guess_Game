@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Guess Game</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="UrScore">Your Score</string>
+    <string name="num">0</string>
+    <string name="play_again">Play Again</string>
+    <string name="UrWord">"Sad"</string>
+    <string name="UrWordIs">Your Word Is...</string>
+    <string name="timeCounter">00:01</string>
+    <string name="currentScore"><![CDATA[Current Score --> 0]]></string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="readyStr">Get Ready To</string>
+    <string name="readyStr2">Guess the Word!</string>
+    <string name="play">Play</string>
 </resources>
