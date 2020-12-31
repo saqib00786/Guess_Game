@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Game.FragmentGame">
+    android:background="@drawable/gamebg"
+    tools:context=".game.FragmentGame">
 
     <LinearLayout
+        android:id="@+id/centeralViewID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -25,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/UrWord"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -47,6 +50,17 @@
             android:textStyle="bold" />
 
     </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nextBtnID_game"
+        android:layout_marginTop="8dp"
+        app:lottie_autoPlay="true"
+        android:layout_below="@id/centeralViewID"
+        app:lottie_fileName="gameplay_counter.json"
+        app:lottie_loop="true" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nextBtnID_game"

@@ -4,32 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/fragmentTitle">
+    <fragment
+        android:id="@+id/fragmentTitle"
+        android:name="com.example.guessgame.title.FragmentTitle"
+        android:label="Title"
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_fragmentTitle_to_fragmentGame"
+            app:destination="@id/fragmentGame"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
 
     <fragment
         android:id="@+id/fragmentGame"
-        android:name="com.example.guessgame.Game.FragmentGame"
-        android:label="fragment_game"
-        tools:layout="@layout/fragment_game" >
+        android:name="com.example.guessgame.game.FragmentGame"
+        android:label="Game"
+        tools:layout="@layout/fragment_game">
         <action
             android:id="@+id/action_fragmentGame_to_fragmentScore"
-            app:destination="@id/fragmentScore" />
+            app:destination="@id/fragmentScore"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
     </fragment>
+
     <fragment
         android:id="@+id/fragmentScore"
-        android:name="com.example.guessgame.Score.FragmentScore"
-        android:label="fragment_score"
-        tools:layout="@layout/fragment_score" >
+        android:name="com.example.guessgame.score.FragmentScore"
+        android:label="Score"
+        tools:layout="@layout/fragment_score">
+        <argument
+            android:name="mScore"
+            app:argType="string" />
         <action
-            android:id="@+id/action_fragmentScore_to_fragmentGame"
-            app:destination="@id/fragmentGame" />
+            android:id="@+id/action_fragmentScore_to_fragmentTitle"
+            app:destination="@id/fragmentTitle"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/fragmentTitle"
+            app:popUpToInclusive="true" />
     </fragment>
-    <fragment
-        android:id="@+id/fragmentTitle"
-        android:name="com.example.guessgame.Title.FragmentTitle"
-        android:label="fragment_title"
-        tools:layout="@layout/fragment_title" >
-        <action
-            android:id="@+id/action_fragmentTitle_to_fragmentGame"
-            app:destination="@id/fragmentGame" />
-    </fragment>
+
 </navigation>
