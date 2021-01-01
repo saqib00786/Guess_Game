@@ -8,7 +8,7 @@
     <string name="UrWord">"Sad"</string>
     <string name="UrWordIs">Your Word Is...</string>
     <string name="timeCounter">00:01</string>
-    <string name="currentScore"><![CDATA[Current Score --> 0]]></string>
+    <string name="currentScore"><![CDATA[Score: 0]]></string>
     <string name="next">Next</string>
     <string name="skip">Skip</string>
     <string name="readyStr">Get Ready To</string>

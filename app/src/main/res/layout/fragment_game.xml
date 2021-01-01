@@ -51,7 +51,7 @@
 
     </LinearLayout>
 
-    <com.airbnb.lottie.LottieAnimationView
+  <!--  <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -60,7 +60,7 @@
         app:lottie_autoPlay="true"
         android:layout_below="@id/centeralViewID"
         app:lottie_fileName="gameplay_counter.json"
-        app:lottie_loop="true" />
+        app:lottie_loop="true" />-->
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nextBtnID_game"
