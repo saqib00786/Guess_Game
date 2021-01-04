@@ -57,6 +57,10 @@ class FragmentGame : Fragment() {
                 model.onCompeleteGameFinished()
             }
         })
+
+        mBinding?.gameViewModel = model
+        mBinding?.setLifecycleOwner(this)
+
     }
 
 

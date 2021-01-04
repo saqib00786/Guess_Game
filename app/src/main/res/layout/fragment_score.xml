@@ -1,53 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context=".score.FragmentScore">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
-        >
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/scoreImg"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:src="@drawable/score"
-            />
+    <data>
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/ur_score_str"
+        <variable
+            name="scoreViewModel"
+            type="com.example.guessgame.score.ScoreViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:context=".score.FragmentScore">
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/UrScore"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"
-            />
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/scoreID_score"
-            style="@style/TextAppearance.AppCompat.Display2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/num" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/scoreImg"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/score" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/playAgainBtnID_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/btn_bg"
-            android:text="@string/play_again"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ur_score_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/UrScore"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/scoreID_score"
+                style="@style/TextAppearance.AppCompat.Display2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/num" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/playAgainBtnID_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_bg"
+                android:text="@string/play_again"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
 
 
-
-</RelativeLayout>
+    </RelativeLayout>
+</layout>
