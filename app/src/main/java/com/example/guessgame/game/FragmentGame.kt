@@ -25,7 +25,7 @@ class FragmentGame : Fragment() {
     private var mBinding: FragmentGameBinding? = null
     private val binding get() = mBinding!!
 
-    private lateinit var model : GameViewModel
+    private lateinit var model: GameViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -68,7 +68,7 @@ class FragmentGame : Fragment() {
                 buzzer.vibrate(VibrationEffect.createWaveform(pattern, -1))
             } else {
                 //deprecated in API 26
-                buzzer.vibrate(pattern,-1)
+                buzzer.vibrate(pattern,AudioAttributes.USAGE_ALARM)
             }
         }
     }
