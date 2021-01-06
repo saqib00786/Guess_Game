@@ -40,7 +40,7 @@
         tools:layout="@layout/fragment_score">
         <argument
             android:name="mScore"
-            app:argType="string" />
+            app:argType="integer" />
         <action
             android:id="@+id/action_fragmentScore_to_fragmentTitle"
             app:destination="@id/fragmentTitle"
